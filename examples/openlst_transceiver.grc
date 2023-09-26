@@ -42,7 +42,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [272, 16.0]
+    coordinate: [408, 12.0]
     rotation: 0
     state: enabled
 - name: freq
@@ -54,7 +54,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 16.0]
+    coordinate: [616, 12.0]
     rotation: 0
     state: enabled
 - name: offset
@@ -66,7 +66,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [480, 16.0]
+    coordinate: [712, 4.0]
     rotation: 0
     state: enabled
 - name: resamp_rate
@@ -78,7 +78,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [344, 16.0]
+    coordinate: [512, 12.0]
     rotation: 0
     state: enabled
 - name: samp_per_sym
@@ -90,19 +90,19 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [192, 16.0]
+    coordinate: [304, 12.0]
     rotation: 0
     state: enabled
 - name: samp_rate
   id: variable
   parameters:
     comment: ''
-    value: 1e6
+    value: '1024000'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [128, 16.0]
+    coordinate: [200, 12.0]
     rotation: 0
     state: enabled
 - name: blocks_freqshift_cc_0_0
@@ -119,7 +119,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1136, 144.0]
+    coordinate: [1264, 116.0]
     rotation: 0
     state: true
 - name: blocks_freqshift_cc_0_0_0
@@ -136,8 +136,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1136, 272.0]
+    coordinate: [1304, 364.0]
     rotation: 180
+    state: true
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1480, 168.0]
+    rotation: 0
     state: true
 - name: digital_gfsk_demod_0
   id: digital_gfsk_demod
@@ -159,7 +176,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [400, 236.0]
+    coordinate: [520, 268.0]
     rotation: 180
     state: true
 - name: digital_gfsk_mod_0
@@ -180,7 +197,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [408, 108.0]
+    coordinate: [688, 116.0]
     rotation: 0
     state: true
 - name: digital_symbol_sync_xx_0
@@ -207,7 +224,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [576, 260.0]
+    coordinate: [696, 380.0]
     rotation: 180
     state: true
 - name: low_pass_filter_0
@@ -231,7 +248,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1000, 248.0]
+    coordinate: [1128, 388.0]
     rotation: 180
     state: true
 - name: mmse_resampler_xx_0
@@ -249,7 +266,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [816, 116.0]
+    coordinate: [976, 104.0]
     rotation: 0
     state: true
 - name: mmse_resampler_xx_0_0
@@ -267,7 +284,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [816, 276.0]
+    coordinate: [992, 256.0]
     rotation: 180
     state: true
 - name: openlst_openlst_demod_0
@@ -291,7 +308,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [224, 220.0]
+    coordinate: [296, 356.0]
     rotation: 180
     state: true
 - name: openlst_openlst_mod_0
@@ -315,7 +332,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [224, 76.0]
+    coordinate: [304, 92.0]
     rotation: 0
     state: true
 - name: openlst_raw_zmq_sink_0
@@ -330,7 +347,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 256.0]
+    coordinate: [40, 332.0]
     rotation: 180
     state: true
 - name: openlst_raw_zmq_source_0
@@ -347,27 +364,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 112.0]
-    rotation: 0
-    state: true
-- name: soapy_hackrf_sink_0
-  id: soapy_hackrf_sink
-  parameters:
-    affinity: ''
-    alias: ''
-    amp: 'False'
-    bandwidth: '0'
-    center_freq: freq-offset
-    comment: ''
-    dev_args: ''
-    samp_rate: samp_rate
-    type: fc32
-    vga: '16'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1280, 148.0]
+    coordinate: [16, 228.0]
     rotation: 0
     state: true
 - name: soapy_rtlsdr_source_0
@@ -389,12 +386,12 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1272, 272.0]
+    coordinate: [1400, 268.0]
     rotation: 180
     state: true
 
 connections:
-- [blocks_freqshift_cc_0_0, '0', soapy_hackrf_sink_0, '0']
+- [blocks_freqshift_cc_0_0, '0', blocks_null_sink_0, '0']
 - [blocks_freqshift_cc_0_0_0, '0', low_pass_filter_0, '0']
 - [digital_gfsk_demod_0, '0', openlst_openlst_demod_0, '0']
 - [digital_gfsk_mod_0, '0', mmse_resampler_xx_0, '0']
@@ -409,4 +406,3 @@ connections:
 
 metadata:
   file_format: 1
-  grc_version: 3.10.6.0
